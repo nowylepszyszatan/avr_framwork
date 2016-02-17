@@ -2,14 +2,14 @@
 
 #include <stdlib.h>
 
-void byte_to_hex(uint8_t num, TByteBuffer buffer)
+void byte_to_hex(uint8_t num, byte_buffer_t buffer)
 {
     buffer = "0x\0\0";
 
     itoa(num, buffer + 2, 16);
 }
 
-void int_to_hex(uint16_t num, TIntBuffer buffer)
+void int_to_hex(uint16_t num, int_buffer_t buffer)
 {
     buffer = "0x\0\0\0\0";
 

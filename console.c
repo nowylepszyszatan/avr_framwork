@@ -6,16 +6,16 @@
 
 #include <string.h>
 
-typedef struct command_map
+typedef struct command_map_t
 {
     char* commands[CONSOLE_NUM_COMMANDS];
     command_handler handlers[CONSOLE_NUM_COMMANDS];
-} command_map;
+} command_map_t;
 
 static char s_buffer[CONSOLE_CMD_BUFFER_SIZE];
 static uint8_t s_buff_index = 0;
 static uint8_t s_command_index = 0;
-static struct command_map s_command_map;
+static struct command_map_t s_command_map;
 
 static void USARTWriteChar(const char data)
 {
